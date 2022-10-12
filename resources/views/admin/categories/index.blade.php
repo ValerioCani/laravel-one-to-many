@@ -19,7 +19,7 @@
                         <td>{{$category->name}}</td>
                         <td>{{$category->slug}}</td>
                         <td class="d-flex">
-                            <a class="btn btn-info" href="">Visualizza</a>
+                            <a class="btn btn-info" href="{{route('admin.categories.show',['category'=>$category->id])}}">Visualizza</a>
                             <a class="btn btn-warning" href="">Modifica</a>
                             <form action="" method="POST">
                                 @csrf
