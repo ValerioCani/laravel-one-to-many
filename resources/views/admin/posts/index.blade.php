@@ -9,6 +9,7 @@
                 <th scope="col">#</th>
                 <th scope="col">title</th>
                 <th scope="col">slug</th>
+                <th scope="col">category</th>
                 <th scope="col">actions</th>
               </tr>
             </thead>
@@ -18,6 +19,7 @@
                         <th scope="row">{{$post->id}}</th>
                         <td>{{$post->title}}</td>
                         <td>{{$post->slug}}</td>
+                        <td>{{($post->category)?$post->category->name:'-'}}</td>
                         <td class="d-flex">
                             <a class="btn btn-info" href="{{route('admin.posts.show', ['post'=>$post->id])}}">Visualizza</a>
                             <a class="btn btn-warning" href="{{route('admin.posts.edit', ['post'=>$post->id])}}">Modifica</a>
