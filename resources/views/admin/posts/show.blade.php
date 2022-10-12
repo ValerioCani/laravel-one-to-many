@@ -9,6 +9,9 @@
         <h3>Content:</h3>
         <h5>{{$post->content}}</h5>
         <br>
+        <h3>Category:</h3>
+        <h5>{{($post->category)?$post->category->name:'-'}}</h5>
+        <br>
         <h3>Slug:</h3>
         <h5>{{$post->slug}}</h5>
     </div>
